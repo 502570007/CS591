@@ -1,0 +1,1 @@
+const spp = (str,cb) => cb()

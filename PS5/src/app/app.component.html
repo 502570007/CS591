@@ -1,0 +1,22 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+</div>
+
+<div>
+
+  <ul>
+  <li *ngFor="let weather of weathers">
+    <label (click)="selectWeather(weather)">{{weather.cityName}}</label>
+  </li>
+  </ul>
+
+</div>
+
+<div *ngIf="selectedWeather">
+<!-- display selected contact -->
+  <h3>Temperature of {{selectedWeather.cityName}} </h3>
+<input type="text" [(ngModel)]="selectedWeather.temperature">
+</div>
